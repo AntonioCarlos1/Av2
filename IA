@@ -1,91 +1,92 @@
 importar  aleatório
+	
+	classe  Appetizer ():
+	    def  __init__ ( self , value , weigths ):
+	        eu . val  =  int ( val )
+	        eu . pes  =  dict ( pes )
+	
+	def  soma ( aperitivo , pes ):
+	    imprimir ( f'Pes Selecionado = { pes } ' )
+	    constat  =  0
+	    value_summation  =  0
+	    para  e  no  aperitivo :
+	        value_summation  + =  e [ 'valores' ] *  e [ 'pesos' ] [ pes ]
+	     rodada de retorno ( soma_val  +  constat , 3 )
+	
+	 custo def ( val_got , val_ideal ):
+	    return  round ((( val_got  -  val_ideal ) **  3 ), 3 )
+	
+	def  generate_weigths ( qtd_weigths ):
+	    pesos  = {}
+	    para  n_weigth  no  intervalo ( qtd_weigths ):
+	        pesos [ f'w { n_weigth } ' ] =  redondo ( aleatório . aleatório (), 3 )
+	     pes de retorno
+	
+	def  generate_list_appetizer ( qtd_appetizer , qtd_weigths_for_appetizer ):
+	    aperitivo  = []
+	    para  n_appetizer  no  intervalo ( qtd_appetizer ):
+	        vars () [ f'e { str ( n_appetizer ) } ' ] = {
+	            "nome" : f'Appetizer { str ( n_appetizer ) } ' ,
+	            "valores" : redondo ( aleatório . aleatório (), 3 ),
+	            "pesos" : generate_weigths ( qtd_weigths_for_appetizer )
+	        }
+	        aperitivo . append ( vars () [ f'e { str ( n_appetizer ) } ' ])
+	    voltar  aperitivo
+	
+	def  weigth_random ( aperitivo ):
+	    return  f'w { str ( random . randint ( 0 , len ( appetizer [ "pesos" ]) -  1 )) } '
+	
+	def  weigth_random ( val ):
+	    return  f'w { str ( random . randint ( 0 , int ( val ) -  1 )) } '
+	
+	def  print_list_appetizer ( aperitivo ):
+	    para  item  no  aperitivo :
+	        imprimir ( f ' { item [ "nome" ] } : valor = { item [ "valores" ] } , pes = { item [ "pesos" ] } ' )
+	    imprimir ( ' \ n ' )
+	
+	def  list_appetizer_total ( aperitivo ):
+	    para  item  no  aperitivo :
+	        imprimir ( item )
+	    imprimir ( ' \ n \ n ' )
+	
+	def  runner ():
+	    qtd_appetizer  =  15
+	    qtd_weigths  =  15
+	    imprimir ( ' \ n = - = - = - = - = - = - = - = Iniciar = - = - = - = - = - = - = - = \ n ' )
+	    imprimir ( f'Número de entradas: { qtd_appetizer } \ n Número de pesos: { qtd_weigths } \ n ' )
+	
+	    entrada  =  generate_list_appetizer ( qtd_appetizer , qtd_weigths )
+	    exit  =  generate_list_appetizer ( qtd_appetizer , qtd_weigths )
+	    imprimir ( ' \ n ' )
+	    imprimir ( 'Lista gerada 01: \ n \ n' )
+	    print_list_appetizer ( entrada )
+	    imprimir ( 'Lista gerada 02: \ n \n' )
+	    print_list_appetizer ( saída )
+	    imprimir ( ' \ n \n ' )
+	
+	    Summations01  =  soma ( entrada , weigth_random ( qtd_weigths ))
+	    Summations02  =  soma ( entrada , weigth_random ( qtd_weigths ))
+	
+	    Custos01  =  custo ( soma 1 , 1 )
+	    Custos02  =  custo ( somas2 , 1 )
+	    ideal  =  costs01  -  custos02
+	
+	    print ( f'Valores Função 1: { summations01 } ' )
+	    imprimir ( f'Valores da 1ª função: { custos01 } ' )
+	    imprimir ( f'Valores Função 2: { summations02 } \ n ' )
+	    imprimir ( f'Valores da 2ª função: { custos02 } ' )
+	
+	    imprimir ( 'Valor ideal: 8,68' )
+	    imprimir ( f'custos01 – custos02 = ideal ' )
+	    imprimir ( f ' { custos01 } - { custos02 } = { ideal } \ n ' )
+	
+	    se  ideal  <  8,68 :
+	        imprimir ( f'Valor abaixo do ideal: { ideal } ' )
+	    elif  ideal  >  8,68 :
+	        print ( f'Valor acima do ideal: { ideal } ' )
+	    mais :
+	        imprimir ( f'Valor ideal atingido: { ideal } ' )
+	
+	if  __name__  ==  '__main__' :
+	    corredor ()
 
-classe  Appetizer ():
-    def  __init__ ( self , value , weigths ):
-        eu . valor  =  int ( valor )
-        eu . pesos  =  dict ( pesos )
-
-def  soma ( aperitivo , peso ):
-    imprimir ( f'Peso Selecionado = { peso } ' )
-    constat  =  0
-    value_summation  =  0
-    para  e  no  aperitivo :
-        value_summation  + =  e [ 'valor' ] *  e [ 'pesos' ] [ peso ]
-     rodada de retorno ( soma_valor  +  constat , 2 )
-
- custo def ( valor_got , valor_ideal ):
-    return  round ((( valor_got  -  valor_ideal ) **  2 ), 2 )
-
-def  generate_weigths ( qtd_weigths ):
-    pesos  = {}
-    para  n_weigth  no  intervalo ( qtd_weigths ):
-        pesos [ f'w { n_weigth } ' ] =  redondo ( aleatório . aleatório (), 2 )
-     pesos de retorno
-
-def  generate_list_appetizer ( qtd_appetizer , qtd_weigths_for_appetizer ):
-    aperitivo  = []
-    para  n_appetizer  no  intervalo ( qtd_appetizer ):
-        vars () [ f'e { str ( n_appetizer ) } ' ] = {
-            "nome" : f'Appetizer { str ( n_appetizer ) } ' ,
-            "valor" : redondo ( aleatório . aleatório (), 2 ),
-            "pesos" : generate_weigths ( qtd_weigths_for_appetizer )
-        }
-        aperitivo . append ( vars () [ f'e { str ( n_appetizer ) } ' ])
-    voltar  aperitivo
-
-def  weigth_random ( aperitivo ):
-    return  f'w { str ( random . randint ( 0 , len ( appetizer [ "pesos" ]) -  1 )) } '
-
-def  weigth_random ( valor ):
-    return  f'w { str ( random . randint ( 0 , int ( valor ) -  1 )) } '
-
-def  print_list_appetizer ( aperitivo ):
-    para  item  no  aperitivo :
-        imprimir ( f ' { item [ "nome" ] } : valor = { item [ "valor" ] } , pesos = { item [ "pesos" ] } ' )
-    imprimir ( ' \ n ' )
-
-def  list_appetizer_total ( aperitivo ):
-    para  item  no  aperitivo :
-        imprimir ( item )
-    imprimir ( ' \ n ' )
-
-def  runner ():
-    qtd_appetizer  =  10
-    qtd_weigths  =  10
-    imprimir ( ' \ n = - = - = - = - = - = - = - = Iniciar = - = - = - = - = - = - = - = \ n ' )
-    imprimir ( f'Número de entradas: { qtd_appetizer } \ n Número de pesos: { qtd_weigths } \ n ' )
-
-    entrada  =  generate_list_appetizer ( qtd_appetizer , qtd_weigths )
-    exit  =  generate_list_appetizer ( qtd_appetizer , qtd_weigths )
-    imprimir ( ' \ n ' )
-    imprimir ( 'Lista gerada 1: \ n ' )
-    print_list_appetizer ( entrada )
-    imprimir ( 'Lista gerada 2: \ n ' )
-    print_list_appetizer ( saída )
-    imprimir ( ' \ n ' )
-
-    summations1  =  soma ( entrada , weigth_random ( qtd_weigths ))
-    summations2  =  soma ( entrada , weigth_random ( qtd_weigths ))
-
-    custos1  =  custo ( soma 1 , 1 )
-    custos2  =  custo ( somas2 , 1 )
-    ideal  =  costs1  -  custos2
-
-    print ( f'Valor Função 1: { summations1 } ' )
-    imprimir ( f'Valor da 1ª função: { custos1 } ' )
-    imprimir ( f'Valor Função 2: { summations2 } \ n ' )
-    imprimir ( f'Valor da 2ª função: { custos2 } ' )
-
-    imprimir ( 'Valor ideal: 3,95' )
-    imprimir ( f'custos1 - custos2 = ideal ' )
-    imprimir ( f ' { custos1 } - { custos2 } = { ideal } \ n ' )
-
-    se  ideal  <  3,95 :
-        imprimir ( f'Valor abaixo do ideal: { ideal } ' )
-    elif  ideal  >  3,95 :
-        print ( f'Valor acima do ideal: { ideal } ' )
-    mais :
-        imprimir ( f'Valor ideal atingido: { ideal } ' )
-
-if  __name__  ==  '__main__' :
-    corredor ()
